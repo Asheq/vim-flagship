@@ -12,15 +12,16 @@ While not strictly required, the following options are highly recommended:
   set showtabline=2
   set guioptions-=e
 <
-                                *g:tablabel* *g:tabprefix* *g:tabsuffix*
+                         *g:tablabel* *g:tabprefix* *g:tabsuffix* *g:tabinfix*
 The default status line is a slightly tweaked version of Vim's default.  To
 override it, :setglobal 'statusline' as usual.  Vim's default tab label is
 difficult to reproduce (and in this humble plugin artist's opinion, not very
 useful), so the default is instead based around the tab's current working
 directories.  To override it, assign |g:tablabel|.  If you are not using the
 GUI tabline, you can also assign |g:tabprefix| and |g:tabsuffix| to control
-the content before and after the tabs themselves.  The defaults are shown
-below:
+the content before and after the tabs themselves.  You can use g:tabinfix to
+display a seperator (e.g., a space character) between tabs. The defaults are
+shown below:
 >
   let g:tabprefix = '%{flagship#id()}'
   let g:tablabel =
